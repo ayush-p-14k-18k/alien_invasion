@@ -1,0 +1,7 @@
+
+1. Set FPS of game to check for smoothness.
+2. Set background color for different game layouts.
+3. Ship type for different levels.
+4. Study about fps(why only multiples of 30 are there in fps).
+5. https://pygame.org - pygame homepage.
+6. https://pygame.org/docs - pygame homepage for documentation.
