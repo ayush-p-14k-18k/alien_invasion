@@ -1,17 +1,19 @@
 
 import pygame
+from pygame.sprite import Sprite
 
 class Ship:
     """A class to manage the ship."""
 
     def __init__(self, a_game):
         """Initialize the ship and set its starting position."""
+        super().__init__()
         self.screen = a_game.screen
         self.settings = a_game.settings
         self.screen_rect = a_game.screen.get_rect()
         
         # Load the ship image and get its rect.
-        self.image = pygame.image.load(r"C:\Users\ayush\OneDrive\Desktop\new demo\game-python\alien_invasion\spaceship (2).png")
+        self.image = pygame.image.load(r"C:\Users\vikas\Desktop\alien invasion\alien_invasion\spaceship (2).png")
         self.rect = self.image.get_rect()  
 
         # Start each new ship at the bottom center of the screen.

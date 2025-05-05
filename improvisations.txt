@@ -5,3 +5,6 @@
 4. Study about fps(why only multiples of 30 are there in fps).
 5. https://pygame.org - pygame homepage.
 6. https://pygame.org/docs - pygame homepage for documentation.
+7. background 
+8. random number of aliens in game.
+9. insert obstacles.
