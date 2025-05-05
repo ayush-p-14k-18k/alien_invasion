@@ -1,4 +1,5 @@
 import sys
+import random
 from time import sleep
 import pygame
 from settings_module import Settings
@@ -17,6 +18,8 @@ class AlienInvasion:
         pygame.init()
         self.clock = pygame.time.Clock()
         self.settings = Settings()
+        self.bg_image = pygame.image.load(r"C:\Users\ayush\OneDrive\Desktop\game game\alien_invasion\images\background.png")
+        self.bg_image = pygame.transform.scale(self.bg_image, (self.settings.screen_width, self.settings.screen_height))
 
         # for full screen the game display
         #caution: make sure to comment out the line just below these 3 codes to run it cleanly. 
@@ -105,8 +108,10 @@ class AlienInvasion:
 
     def _update_screen(self):
         """Update images on the screen, and flip to the new screen."""
-        self.screen.fill(self.settings.bg_color)  # Fill the screen with a color
-        
+        #self.screen.fill(self.settings.bg_color)  # Fill the screen with a color
+        self.screen.blit(self.bg_image, (0, 0))
+
+
         for bullet in self.bullets.sprites():
             bullet.draw_bullet()
         self.aliens.draw(self.screen)
@@ -173,12 +178,18 @@ class AlienInvasion:
         alien_width, alien_height = alien.rect.size
         alien_width = alien.rect.width
         available_space_x = self.settings.screen_width - (2 * alien_width)
-        number_aliens_x = available_space_x // (2 * alien_width)
+        max_aliens_x = available_space_x // (2 * alien_width)
+
+        # random number of aliens in a row(at least 3)
+        number_aliens_x = random.randint(3, max_aliens_x)
 
         #Determine the number of rows of aliens that fit on the screen.
         ship_height = self.ship.rect.height
         available_space_y = (self.settings.screen_height - (3 * alien_height) - ship_height)
         number_rows = available_space_y // (2 * alien_height)
+
+        #random number of rows of aliens(at least 2)
+        number_rows = random.randint(2, number_rows)
         
         #Create the full fleet of aliens.
         for row_number in range(number_rows):
