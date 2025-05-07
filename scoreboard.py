@@ -74,7 +74,7 @@ class Scoreboard:
         self.ships = Group()
         for ship_number in range(self.stats.ships_left):
             heart = pygame.sprite.Sprite()
-            heart.image = pygame.image.load(r"C:\Users\ayush\OneDrive\Desktop\game game\alien_invasion\images\editted pink heart.png").convert()  # Make sure this file exists
+            heart.image = pygame.image.load(r"C:\Users\anike\OneDrive\Desktop\new game folder\alien_invasion\images\editted pink heart.png").convert()  # Make sure this file exists
             heart.image = pygame.transform.scale(heart.image, (40, 40))  # Resize to fit nicely
             heart.rect = heart.image.get_rect()
             heart.rect.x = 10 + ship_number * heart.rect.width

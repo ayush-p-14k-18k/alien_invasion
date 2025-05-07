@@ -18,7 +18,7 @@ class AlienInvasion:
         pygame.init()
         self.clock = pygame.time.Clock()
         self.settings = Settings()
-        self.bg_image = pygame.image.load(r"C:\Users\ayush\OneDrive\Desktop\game game\alien_invasion\images\background.png")
+        self.bg_image = pygame.image.load(r"C:\Users\anike\OneDrive\Desktop\python\background12.jpg")
         self.bg_image = pygame.transform.scale(self.bg_image, (self.settings.screen_width, self.settings.screen_height))
 
         # for full screen the game display
