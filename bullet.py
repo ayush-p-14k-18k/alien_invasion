@@ -13,7 +13,7 @@ class Bullet(Sprite):
         self.settings = ai_game.settings
 
         # create a bullet rect at (0, 0) and set the correct position
-        self.image = pygame.image.load(r"C:\Users\anike\OneDrive\Desktop\bullet.png").convert_alpha()
+        self.image = pygame.image.load(r"C:\Users\ayush\OneDrive\Desktop\game project\alien_invasion\images\bullet.png").convert_alpha()
         self.rect = self.image.get_rect()
         self.rect.midtop = ai_game.ship.rect.midtop
 

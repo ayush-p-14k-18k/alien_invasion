@@ -10,11 +10,9 @@ class Button:
         self.screen_rect = self.screen.get_rect()
 
         #Loadd and scale the button image
-        self.image = pygame.image.load(r"C:\Users\anike\OneDrive\Desktop\python\playnew.png").convert_alpha()
+        self.image = pygame.image.load(r"C:\Users\ayush\OneDrive\Desktop\game project\alien_invasion\images\Screenshot 2025-05-11 154852.png").convert_alpha()
         self.rect = self.image.get_rect()
         self.rect.center = self.screen_rect.center
-
-
 
     def draw_button(self):
         """Draw blank button and then draw the message."""

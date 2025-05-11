@@ -13,7 +13,7 @@ class Ship(pygame.sprite.Sprite):
         self.screen_rect = a_game.screen.get_rect()
         
         # Load the ship image and get its rect.
-        self.image = pygame.image.load(r"C:\Users\anike\OneDrive\Desktop\new game folder\alien_invasion\images\ship.png")
+        self.image = pygame.image.load(r"C:\Users\ayush\OneDrive\Desktop\game project\alien_invasion\images\ship.png")
         self.rect = self.image.get_rect()  
 
         # Start each new ship at the bottom center of the screen.
